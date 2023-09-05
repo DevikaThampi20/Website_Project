@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% extends 'home.html' %}
+{% load static %}
+<html>
+<head>
+    <title>Course List</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+{% block image%}
+{% endblock%}
+<div class="container mt-4">
+    {% block content %}
+    <h1>Courses</h1>
+    <div class="row" style="height:100px">
+        {% for details in Courses%}
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card" style="width:250px;">
+                <img src="{{details.image.url}}" class="card-img-top" alt="Course 1" style="height:200px;width:100%">
+                <div class="card-body">
+                    <h5 class="card-title">{{details.title}}</h5>
+                    <p class="card-text">{{details.description}}</p>
+                    <p class="card-subtitle">{{details.price}}</p>
+                    <a href="#" class="btn btn-primary">Enroll Now</a>
+                </div>
+            </div>
+        </div>
+<!--        <div class="col-lg-4 col-md-6 mb-4">-->
+<!--            <div class="card">-->
+<!--                <img src="course2.jpg" class="card-img-top" alt="Course 2">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Course Title 2</h5>-->
+<!--                    <p class="card-text">Description of Course 2.</p>-->
+<!--                    <a href="#" class="btn btn-primary">Enroll Now</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="col-lg-4 col-md-6 mb-4">-->
+<!--            <div class="card">-->
+<!--                <img src="course3.jpg" class="card-img-top" alt="Course 3">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Course Title 3</h5>-->
+<!--                    <p class="card-text">Description of Course 3.</p>-->
+<!--                    <a href="#" class="btn btn-primary">Enroll Now</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+        <!-- Add more course cards here -->
+        {% endfor %}
+    </div>
+    {% endblock %}
+</div>
+<!-- Include Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

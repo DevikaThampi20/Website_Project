@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>REGISTRATION FORM</title>
+</head>
+<style>
+	form{
+		background-image:url('C:/Users/DEVIKA THAMPI/Pictures/New folder/register.jpeg');
+		width:500px;
+		margin-left: 400px;
+	}
+</style>
+<body style="text-align: center;font-family:courier;font-size:100%;background-color:plum">
+	<form method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+		<h1 style="font-family:times new roman;color:purple"><b>REGISTRATION FORM</b></h1>
+		<label for="username"><b>USERNAME: </b></label><br>
+		<input type="text" name="username" id="username" placeholder="enter username"><br>
+		<label for="firstname"><b>FIRST NAME: </b></label><br>
+		<input type="firstname" name="firstname" id="firstname" placeholder="enter firstname"><br>
+		<label for="lastname"><b>LAST NAME:</b> </label><br>
+		<input type="lastname" name="lastname" id="lastname" placeholder="enter lastname"><br>
+		<label for="email"><b>EMAIL ID: </b> </label><br>
+		<input type="email" name="email" id="email" placeholder="enter email"><br>
+		<label for="password"><b>PASSWORD: </b></label><br>
+		<input type="password" name="password" id="password"><br>
+		<label for="confirm_password"><b>CONFIRM PASSWORD: </b></label><br>
+		<input type="password" name="confirm_password" id="confirm_password"><br>
+		<label for="radio"><b>GENDER: </b></label><br>
+	    <input type="radio" name="radio" id="radio">Female
+	    <input type="radio" name="radio" id="radio">Male
+	    <input type="radio" name="radio" id="radio">Others<br>
+	    <label for="date"><b>DATE OF BIRTH:</b> </label><br>
+	    <input type="date" name="date" id="date"><br>
+	    <label for="city"><b>CITY: </b></label><br>
+        <input type="text" name="city" id="city"><br>
+        <label for="state"><b>STATE: </b></label><br>
+        <input type="text" name="state" id="state"><br>
+        <label for="country"><b>COUNTRY: </b> </label><br>
+        <input type="text" name="country" id="country"><br>
+        <label for="pincode"><b>PIN: </b></label><br>
+	    <input type="pincode" name="pincode" id="pincode" pattern="[0-9]{6}"><br>
+	    <label for="file"><b>UPLOAD IMAGE: </b></label><br>
+	    <input type="file" name="file" id="file"><br><br>
+	    <input type="RESET" value="RESET">
+	    <input type="SUBMIT" value="SUBMIT">
+	</form>
+</body>
+</html>

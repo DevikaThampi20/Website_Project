@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+	<title>home.vintage</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<style>
+    body{
+    background:#f6f7fa
+    }
+
+	.a{
+		/*margin-left: 400px;*/
+
+	}
+	img{
+		width:100px;
+	}
+	.b{
+		display: flex;
+	}
+	h1{
+		font-family:Times New Roman;
+		text-align: center;
+		text-transform:uppercase;
+		color: #004080;
+
+
+	}
+	.c{
+		margin-left:115px;
+		margin-top: -20px;
+		font-family:'Brush Script MT',cursive;
+		font-size:25px;
+	}
+	ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color:#004080;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover{
+        background-color:white;
+        color:#004080;
+    }
+    .d{
+    	color:#004080;
+    	font-size:25px;
+    	font-family:'fantasy',cursive;
+    	margin-top:-600px;
+
+    }
+
+</style>
+</head>
+<body>
+	<div class="container-fluid">
+	<div  class="a">
+	<div class="b">
+	<img src="{% static 'dashboard/css/vintage-removebg-preview.png' %}">
+	<h1>Vintage<br>Info Solutions</h1></div>
+	<p class="c">Where professionals are made</p>
+</div>
+<ul>
+  <li><a href="{% url 'home' %}">Home</a></li>
+  <li><a href="{% url 'course_new' %}">Courses</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="#contact">Contact Us</a></li>
+  <li style="float: right;"><a href="#help">Help</a></li>
+  <li style="float: right;"><a href="{% url 'login' %}">Login/Register</a></li>
+</ul>
+<div style="animation-duration: 4s;">
+	{% block image%}
+	<img src="{% static 'css/image/IT.jpeg' %}" style="width: 100%;">
+	<p class="d">We provide quality education with at most trust </p>
+	{% endblock %}
+</div>
+
+</div>
+<div class="content">
+	{% block content%}{%endblock%}
+</div>
+</body>
+</html>
